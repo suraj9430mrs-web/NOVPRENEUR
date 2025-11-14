@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Novpreneur — Where Students Become Founders. NexGen, Infinity, NovStay incubator & residencies." />
+  <meta property="og:title" content="Novpreneur — Student Startup Incubator" />
+  <meta property="og:description" content="Skill-to-startup programs, accelerator, and residency for student founders." />
+  <title>Novpreneur — Where Students Become Founders</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home">Novpreneur</a>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#apply">Apply</a></li>
+        <li><a href="#mentors">Mentors</a></li>
+        <li><a href="#startups">Startups</a></li>
+        <li><a href="#novstay">NovStay</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="login-btn" class="btn small">Login</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Where Students Become Founders</h1>
+          <p class="lead">Novpreneur helps students learn skills, build prototypes and launch startups — NexGen (skills), Infinity (accelerator), NovStay (residency).</p>
+          <div class="cta-row">
+            <a class="btn" href="#programs">Explore Programs</a>
+            <a class="btn ghost" href="#apply">Apply Now</a>
+          </div>
+          <ul class="stats" aria-hidden="true">
+            <li><strong id="stat-students">0</strong><span>Students</span></li>
+            <li><strong id="stat-startups">0</strong><span>Startups</span></li>
+            <li><strong id="stat-mentors">0</strong><span>Mentors</span></li>
+          </ul>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <img src="https://via.placeholder.com/520x320?text=Novpreneur+Labs" alt="Novpreneur labs preview" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section id="programs" class="section container">
+      <h2>Our Programs</h2>
+      <p class="muted">Pick a pathway — skill, accelerator, or immersive residency.</p>
+      <div class="grid-3">
+        <article class="card">
+          <h3>NexGen</h3>
+          <p>Skill-first cohorts: web, mobile, marketing, product and low-code labs. Project-based, low-cost, high-impact.</p>
+          <ul>
+            <li>8–12 week cohorts</li>
+            <li>Real problem exams & projects</li>
+            <li>Internship marketplace</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn small" href="#apply" data-prefill="NexGen">Apply</a>
+            <a class="btn ghost small" href="#program-nexgen">Learn More</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Infinity</h3>
+          <p>High-touch accelerator for MVP-ready student startups. Free for selected teams; equity & corporate pilots included.</p>
+          <ul>
+            <li>12–24 week intensive</li>
+            <li>Dedicated mentors & dev support</li>
+            <li>Investor Demo Days</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn small" href="#apply" data-prefill="Infinity">Apply</a>
+            <a class="btn ghost small" href="#program-infinity">Learn More</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>NovStay</h3>
+          <p>Residency + co-living for teams: focus time, community, workspace and meals — built for sprints.</p>
+          <ul>
+            <li>Dorm / Private / Premium tiers</li>
+            <li>Residency packages & mentor hours</li>
+            <li>Bookings & sponsorships</li>
+          </ul>
+          <div class="card-actions">
+            <a class="btn small" href="#novstay">Book Stay</a>
+            <a class="btn ghost small" href="#program-novstay">Learn More</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROGRAM DETAIL STUBS -->
+    <section id="program-nexgen" class="section alt container">
+      <h3>NexGen — Quick Details</h3>
+      <p>Project-first cohorts, hands-on, low-cost. Weekly mentor office hours. Outcome: build a working prototype and SaaS-ready demo.</p>
+    </section>
+
+    <section id="program-infinity" class="section container">
+      <h3>Infinity — Quick Details</h3>
+      <p>Free for selected teams, equity model, investor introductions, and paid corporate pilots.</p>
+    </section>
+
+    <section id="program-novstay" class="section alt container">
+      <h3>NovStay — Quick Details</h3>
+      <p>Immersive residencies with beds + desks + food + mentor slots. Low-cost dorms to premium residency.</p>
+    </section>
+
+    <!-- APPLY MULTI-STEP -->
+    <section id="apply" class="section container">
+      <h2>Apply to Novpreneur</h2>
+      <p class="muted">Fill the form below. You can save progress and continue later.</p>
+
+      <form id="apply-form" class="card form-card" aria-labelledby="apply-heading">
+        <h3 id="apply-heading">Application</h3>
+
+        <div class="step step-1">
+          <label>Full Name
+            <input name="fullName" type="text" required />
+          </label>
+          <label>Email
+            <input name="email" type="email" required />
+          </label>
+          <label>Phone
+            <input name="phone" type="tel" />
+          </label>
+          <div class="form-nav">
+            <button type="button" class="btn" id="to-step-2">Next →</button>
+          </div>
+        </div>
+
+        <div class="step step-2 hidden">
+          <label>Program applying for
+            <select name="program" id="program-select" required>
+              <option value="">-- Choose program --</option>
+              <option value="NexGen">NexGen</option>
+              <option value="Infinity">Infinity</option>
+              <option value="NovStay">NovStay</option>
+            </select>
+          </label>
+
+          <label>Short idea / project summary (100 words)
+            <textarea name="summary" maxlength="800"></textarea>
+          </label>
+
+          <div class="form-nav">
+            <button type="button" class="btn ghost" id="to-step-1">← Back</button>
+            <button type="button" class="btn" id="to-step-3">Next →</button>
+          </div>
+        </div>
+
+        <div class="step step-3 hidden">
+          <label>Upload Resume (PDF recommended)
+            <input name="resume" id="resume-input" type="file" accept=".pdf,.doc,.docx" />
+            <progress id="upload-progress" value="0" max="100" class="hidden"></progress>
+            <p id="upload-filename" class="muted small"></p>
+          </label>
+
+          <label>
+            <input type="checkbox" name="agree" required /> I agree to Novpreneur's <a href="#privacy">privacy policy</a>.
+          </label>
+
+          <div class="form-nav">
+            <button type="button" class="btn ghost" id="to-step-2b">← Back</button>
+            <button type="submit" class="btn" id="submit-application">Submit Application</button>
+          </div>
+        </div>
+
+        <div class="form-result hidden" id="apply-result" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <!-- MENTORS -->
+    <section id="mentors" class="section container">
+      <h2>Mentors</h2>
+      <p class="muted">Expert mentors from product, tech, design and investors.</p>
+      <div id="mentors-list" class="grid-3">
+        <!-- JS will inject mentor cards -->
+      </div>
+    </section>
+
+    <!-- STARTUPS -->
+    <section id="startups" class="section alt container">
+      <h2>Startups</h2>
+      <p class="muted">Portfolio of teams from Novpreneur.</p>
+      <div id="startups-list" class="grid-3"></div>
+    </section>
+
+    <!-- NOVSTAY BOOKING -->
+    <section id="novstay" class="section container">
+      <h2>NovStay — Book Residency</h2>
+      <p class="muted">Select a room type and dates to reserve your stay.</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>Dorm (shared)</h4>
+          <p>₹6,000 / month</p>
+          <ul><li>Shared bed + desk</li><li>Common kitchen</li></ul>
+          <button class="btn book-btn" data-type="dorm">Book</button>
+        </div>
+        <div class="card">
+          <h4>Private (single)</h4>
+          <p>₹14,000 / month</p>
+          <ul><li>Private room + desk</li><li>Meals included</li></ul>
+          <button class="btn book-btn" data-type="private">Book</button>
+        </div>
+        <div class="card">
+          <h4>Premium Residency</h4>
+          <p>₹40,000 / month</p>
+          <ul><li>Private room + mentor hours</li><li>Premium amenities</li></ul>
+          <button class="btn book-btn" data-type="premium">Book</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG (stub) -->
+    <section id="blog" class="section alt container">
+      <h2>Blog</h2>
+      <p class="muted">Latest insights from Novpreneur.</p>
+      <div id="blog-list" class="grid-3"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <div class="grid-2">
+        <form id="contact-form" class="card form-card">
+          <label>Name <input name="cname" required /></label>
+          <label>Email <input name="cemail" type="email" required /></label>
+          <label>Message <textarea name="cmessage" required></textarea></label>
+          <button type="submit" class="btn">Send</button>
+          <p id="contact-result" class="muted small"></p>
+        </form>
+        <div class="card">
+          <h3>Visit Us</h3>
+          <p>Novpreneur HQ, Patna (sample address)</p>
+          <p>Email: hello@novpreneur.example</p>
+          <p>Phone: +91 70000 00000</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD (mock) -->
+    <section id="dashboard" class="section container hidden">
+      <h2>Your Dashboard</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 id="dash-name">Hi, Student</h3>
+          <div id="dash-info"></div>
+        </div>
+        <div class="card">
+          <h3>Sandbox Score</h3>
+          <div id="sandbox-score"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMIN (protected simple) -->
+    <section id="admin" class="section alt container hidden">
+      <h2>Admin Panel</h2>
+      <p class="muted">Protected area — use admin passcode to reveal.</p>
+      <div id="admin-area" class="card hidden">
+        <h3>Applications</h3>
+        <div id="admin-apps"></div>
+      </div>
+
+      <div id="admin-login" class="card">
+        <label>Enter admin passcode
+          <input id="admin-pass" type="password" />
+        </label>
+        <button id="admin-unlock" class="btn">Unlock</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Novpreneur — Built for student founders.</p>
+      <p class="muted">Made with ♥ • Privacy • Terms</p>
+    </div>
+  </footer>
+
+  <div id="modal-root"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+/* script.js — single-file app logic (mock back-end using localStorage) */
+
+/* ---------- Helpers ---------- */
+const $ = (s, root = document) => root.querySelector(s);
+const $$ = (s, root = document) => Array.from(root.querySelectorAll(s));
+const uid = () => Math.random().toString(36).slice(2,9);
+
+/* ---------- UI Setup ---------- */
+document.getElementById('year').textContent = new Date().getFullYear();
+const navToggle = $('#nav-toggle'), navMenu = $('#nav-menu');
+navToggle?.addEventListener('click', () => {
+  const open = navMenu.classList.toggle('show');
+  navToggle.setAttribute('aria-expanded', open);
+});
+
+/* Populate stats (mock) */
+function updateStats(){ 
+  $('#stat-students').textContent = localStorage.getItem('stat_students') || 124;
+  $('#stat-startups').textContent = localStorage.getItem('stat_startups') || 18;
+  $('#stat-mentors').textContent = localStorage.getItem('stat_mentors') || 32;
+}
+updateStats();
+
+/* ---------- Sample data ---------- */
+const MENTORS = [
+  {id:'m1',name:'Rohit Kumar', role:'CTO in Residence', bio:'Tech founder, full-stack mentor', topics:['Tech','Scaling']},
+  {id:'m2',name:'Alok Raj', role:'CMO', bio:'Growth & marketing expert', topics:['Growth','Content']},
+  {id:'m3',name:'Nobesh Yogi', role:'IP Advisor', bio:'Patent & legal counsel', topics:['IP','Legal']},
+];
+
+const STARTUPS = [
+  {id:'s1',name:'EcoCharge', founders:'Aisha & Ravi', stage:'MVP Ready', pitch:'Portable solar chargers for students', demo:'https://www.youtube.com/watch?v=dQw4w9WgXcQ'},
+  {id:'s2',name:'StudyBuddy', founders:'Tina', stage:'Pre-MVP', pitch:'AI note generator for lectures', demo:''},
+];
+
+const BLOGS = [
+  {id:'b1',title:'How to pick a co-founder', excerpt:'Quick practical checklist...'},
+  {id:'b2',title:'Running a 2-week hackathon', excerpt:'Plan, tools, exercises...'},
+];
+
+/* ---------- Render lists ---------- */
+function renderMentors(){
+  const root = $('#mentors-list');
+  root.innerHTML = MENTORS.map(m=>`
+    <article class="card">
+      <h4>${m.name}</h4>
+      <p class="muted">${m.role}</p>
+      <p>${m.bio}</p>
+      <p class="small muted">Topics: ${m.topics.join(', ')}</p>
+      <div class="card-actions">
+        <button class="btn small" data-mentor="${m.id}" onclick="bookMentor('${m.id}')">Book</button>
+      </div>
+    </article>
+  `).join('');
+}
+function renderStartups(){
+  $('#startups-list').innerHTML = STARTUPS.map(s=>`
+    <article class="card">
+      <h4>${s.name}</h4>
+      <p class="muted">Founders: ${s.founders} • ${s.stage}</p>
+      <p>${s.pitch}</p>
+      <div class="card-actions">
+        ${s.demo ? `<a class="btn small" href="${s.demo}" target="_blank">Demo</a>` : `<button class="btn small ghost" disabled>No Demo</button>`}
+      </div>
+    </article>
+  `).join('');
+}
+function renderBlog(){
+  $('#blog-list').innerHTML = BLOGS.map(b=>`
+    <article class="card">
+      <h4>${b.title}</h4>
+      <p class="muted">${b.excerpt}</p>
+      <div class="card-actions"><a class="btn small" href="#">Read</a></div>
+    </article>
+  `).join('');
+}
+renderMentors(); renderStartups(); renderBlog();
+
+/* ---------- Apply form multi-step & save ---------- */
+const applyForm = $('#apply-form');
+const steps = $$('.step', applyForm);
+let currentStep = 0;
+
+function showStep(i){
+  steps.forEach((s, idx)=> s.classList.toggle('hidden', idx !== i));
+  currentStep = i;
+}
+showStep(0);
+
+/* Prefill when clicking "Apply" on cards */
+$$('a[data-prefill]').forEach(a => a.addEventListener('click', e=>{
+  const p = e.currentTarget.dataset.prefill;
+  $('#program-select').value = p;
+  document.location.hash = '#apply';
+  showStep(1);
+}));
+
+$('#to-step-2').addEventListener('click', ()=> showStep(1));
+$('#to-step-1').addEventListener('click', ()=> showStep(0));
+$('#to-step-3').addEventListener('click', ()=> showStep(2));
+$('#to-step-2b').addEventListener('click', ()=> showStep(1));
+
+/* File upload simulation */
+const resumeInput = $('#resume-input');
+const progress = $('#upload-progress');
+const uploadFilename = $('#upload-filename');
+
+resumeInput.addEventListener('change', async (e)=>{
+  const f = e.target.files[0];
+  if(!f) return;
+  if(f.size > 5*1024*1024){ alert('File too large > 5MB'); resumeInput.value=''; return; }
+  uploadFilename.textContent = f.name;
+  progress.classList.remove('hidden');
+  // simulate upload
+  for(let p=0;p<=100;p+=10){
+    progress.value = p; await new Promise(r=>setTimeout(r,60));
+  }
+  progress.classList.add('hidden');
+});
+
+/* Submit */
+applyForm.addEventListener('submit', (ev)=>{
+  ev.preventDefault();
+  const form = new FormData(applyForm);
+  const app = {
+    id: uid(),
+    name: form.get('fullName'),
+    email: form.get('email'),
+    phone: form.get('phone'),
+    program: form.get('program'),
+    summary: form.get('summary'),
+    resumeName: resumeInput.files[0] ? resumeInput.files[0].name : null,
+    status: 'pending',
+    createdAt: new Date().toISOString()
+  };
+  // Save to local "db"
+  const apps = JSON.parse(localStorage.getItem('apps')||'[]');
+  apps.unshift(app);
+  localStorage.setItem('apps', JSON.stringify(apps));
+  $('#apply-result').classList.remove('hidden');
+  $('#apply-result').textContent = 'Application submitted! Check your dashboard. (This demo stores data locally.)';
+  // Reset form lightly for demo
+  applyForm.reset(); showStep(0);
+  // update student stat
+  localStorage.setItem('stat_students', (Number(localStorage.getItem('stat_students')||124)+1));
+  updateStats();
+});
+
+/* ---------- Dashboard & login (simple mock) ---------- */
+const loginBtn = $('#login-btn');
+loginBtn.addEventListener('click', ()=> openLogin());
+
+function openLogin(){
+  const email = prompt('Enter your email (demo login):');
+  if(!email) return;
+  localStorage.setItem('user', JSON.stringify({email, name: email.split('@')[0]}));
+  alert('Logged in as ' + email);
+  renderDashboard();
+  document.location.hash = '#dashboard';
+}
+
+function renderDashboard(){
+  const user = JSON.parse(localStorage.getItem('user')||'null');
+  if(!user) return;
+  $('#dashboard').classList.remove('hidden');
+  $('#dash-name').textContent = `Hi, ${user.name}`;
+  const apps = JSON.parse(localStorage.getItem('apps')||'[]').filter(a=>a.email === user.email);
+  const bookings = JSON.parse(localStorage.getItem('bookings')||'[]').filter(b=>b.email===user.email);
+  $('#dash-info').innerHTML = `
+    <p class="muted small">Applications: ${apps.length || 0}</p>
+    <ul>${apps.map(a=>`<li>${a.program} — ${a.status} <small class="muted">(${new Date(a.createdAt).toLocaleDateString()})</small></li>`).join('')}</ul>
+    <p class="muted small">Bookings: ${bookings.length || 0}</p>
+  `;
+  // sandbox score (demo)
+  const score = Math.min(100, (apps.length*20 + (bookings.length*10)));
+  $('#sandbox-score').innerHTML = `<div class="progress" aria-hidden="true"><i style="width:${score}%"></i></div><p class="muted small">Points: ${score}</p>`;
+}
+
+/* On load show dashboard if logged in */
+if(localStorage.getItem('user')) renderDashboard();
+
+/* ---------- Booking modal & logic ---------- */
+function createModal(html){
+  const root = $('#modal-root');
+  root.innerHTML = `<div class="modal" role="dialog" aria-modal="true">${html}</div><style>
+    .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:9999}
+    .modal .card{max-width:520px;width:100px;padding:1rem}
+  </style>`;
+  root.addEventListener('click', e=>{ if(e.target===root) root.innerHTML=''; });
+}
+window.bookMentor = function(mid){
+  const m = MENTORS.find(x=>x.id===mid);
+  createModal(`<div class="card"><h3>Book Mentor — ${m.name}</h3>
+    <p class="muted">${m.role}</p>
+    <label>Your email <input id="book-email" type="email" required /></label>
+    <label>Select slot <input id="book-slot" placeholder="2025-11-15 15:00" /></label>
+    <div class="card-actions"><button class="btn" id="confirm-book">Confirm</button><button class="btn ghost" onclick="document.getElementById('modal-root').innerHTML=''">Cancel</button></div>
+    </div>`);
+  $('#confirm-book').addEventListener('click', ()=>{
+    const email = $('#book-email').value;
+    const slot = $('#book-slot').value;
+    if(!email || !slot){ alert('Fill email and slot'); return; }
+    const bookings = JSON.parse(localStorage.getItem('bookings')||'[]');
+    bookings.unshift({id:uid(),mentor:mid,email,slot,status:'pending',createdAt:new Date().toISOString()});
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+    alert('Booked (demo). Mentor will confirm via admin.');
+    document.getElementById('modal-root').innerHTML='';
+    updateStats();
+  });
+};
+
+$$('.book-btn').forEach(btn => btn.addEventListener('click', e=>{
+  const type = e.currentTarget.dataset.type;
+  createModal(`<div class="card"><h3>Book NovStay — ${type}</h3>
+    <label>Your email <input id="stay-email" type="email" /></label>
+    <label>Start date <input id="stay-start" type="date" /></label>
+    <label>Duration (weeks) <input id="stay-weeks" type="number" value="4" min="1" /></label>
+    <div class="card-actions"><button class="btn" id="confirm-stay">Proceed</button><button class="btn ghost" onclick="document.getElementById('modal-root').innerHTML=''">Cancel</button></div>
+  </div>`);
+  $('#confirm-stay').addEventListener('click', ()=>{
+    const email = $('#stay-email').value;
+    const start = $('#stay-start').value;
+    const weeks = $('#stay-weeks').value;
+    if(!email || !start){ alert('Email and start date required'); return; }
+    const bookings = JSON.parse(localStorage.getItem('bookings')||'[]');
+    bookings.unshift({id:uid(),type,email,start,weeks,status:'requested',createdAt:new Date().toISOString()});
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+    alert('Booking requested (demo). Pay later via admin or your dashboard.');
+    document.getElementById('modal-root').innerHTML='';
+    updateStats();
+  });
+}));
+
+/* ---------- Contact form (demo) ---------- */
+$('#contact-form').addEventListener('submit', (e)=>{
+  e.preventDefault();
+  const f = new FormData(e.target);
+  // In production: send to server / SendGrid
+  $('#contact-result').textContent = 'Message received — we will contact you soon (demo)';
+  e.target.reset();
+});
+
+/* ---------- Admin simple unlock & view ---------- */
+$('#admin-unlock').addEventListener('click', ()=>{
+  const pass = $('#admin-pass').value;
+  // NOTE: replace with real auth & strong checks in production
+  if(pass === 'novadmin123'){
+    $('#admin-area').classList.remove('hidden');
+    $('#admin-login').classList.add('hidden');
+    renderAdminApps();
+  } else alert('Wrong passcode.');
+});
+
+function renderAdminApps(){
+  const apps = JSON.parse(localStorage.getItem('apps')||'[]');
+  $('#admin-apps').innerHTML = apps.length ? apps.map(a=>`
+    <div class="card">
+      <strong>${a.name}</strong> (${a.program}) — <em>${a.status}</em>
+      <p class="muted small">${a.email} • ${new Date(a.createdAt).toLocaleString()}</p>
+      <div class="card-actions">
+        <button class="btn small" onclick="adminAction('${a.id}','approve')">Approve</button>
+        <button class="btn ghost small" onclick="adminAction('${a.id}','reject')">Reject</button>
+      </div>
+    </div>
+  `).join('') : '<p class="muted small">No applications yet.</p>';
+}
+
+window.adminAction = function(id, action){
+  const apps = JSON.parse(localStorage.getItem('apps')||'[]');
+  const idx = apps.findIndex(a=>a.id===id);
+  if(idx===-1) return alert('Not found');
+  apps[idx].status = action==='approve' ? 'approved' : 'rejected';
+  apps[idx].reviewedAt = new Date().toISOString();
+  localStorage.setItem('apps', JSON.stringify(apps));
+  renderAdminApps();
+  alert('Application ' + apps[idx].status);
+};
+
+/* ---------- Ready / hydration ---------- */
+window.addEventListener('hashchange', ()=>{
+  const h = location.hash.replace('#','');
+  if(h==='dashboard' && localStorage.getItem('user')) renderDashboard();
+});
+
+
+    /* Basic reset & variables */
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #ff7a59;
+  --primary: #0ea5a8;
+  --glass: rgba(255,255,255,0.03);
+  --max-w: 1100px;
+  --radius: 12px;
+  --gap: 1.25rem;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: dark;
+}
+
+/* Light mode fallback */
+@media (prefers-color-scheme: light){
+  :root{
+    --bg: #f7fafc;
+    --card: #ffffff;
+    --muted: #475569;
+    --glass: rgba(15,23,36,0.04);
+    --accent: #ff7a59;
+    --primary: #0f1724;
+    color-scheme: light;
+  }
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg,var(--bg), #06070a 80%);
+  color: #e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* Container */
+.container{max-width:var(--max-w);margin:0 auto;padding:2rem;}
+
+/* Header / Nav */
+.site-header{backdrop-filter: blur(6px);position:sticky;top:0;z-index:20;background:linear-gradient(180deg, rgba(0,0,0,0.35), transparent);}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-weight:700;font-size:1.1rem;color:var(--accent);text-decoration:none}
+.nav-menu{list-style:none;display:flex;gap:0.6rem;margin:0;padding:0;align-items:center}
+.nav-menu a, .nav-menu button{color:inherit;text-decoration:none;padding:0.45rem 0.6rem;border-radius:8px}
+.nav-toggle{display:none;background:none;border:0;color:inherit;font-size:1.25rem}
+
+/* Hero */
+.hero{padding:3rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.hero h1{font-size:2.1rem;margin:0 0 0.5rem}
+.lead{color:var(--muted);margin-top:0}
+.hero-card img{width:100%;border-radius:12px;object-fit:cover;display:block}
+.cta-row{margin-top:1rem;display:flex;gap:0.75rem}
+
+/* Cards & layout */
+.card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));border-radius:var(--radius);padding:1rem;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+.card h3{margin-top:0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+
+.section{padding:2rem 0}
+.section.alt{background:rgba(255,255,255,0.02);}
+
+/* Buttons */
+.btn{background:linear-gradient(90deg,var(--accent), #ff9966);border:0;padding:0.6rem 0.9rem;border-radius:10px;color:#071025;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit}
+.btn.small{padding:0.4rem 0.6rem;font-size:0.9rem}
+.card-actions{display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap}
+
+/* Forms */
+.form-card label{display:block;margin-bottom:0.6rem}
+.form-card input[type="text"], .form-card input[type="email"], .form-card input[type="tel"], .form-card textarea, .form-card select, .form-card input[type="password"]{
+  width:100%;padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:0.25rem
+}
+.form-nav{display:flex;justify-content:space-between;margin-top:0.75rem}
+
+/* Footer */
+.site-footer{padding:1.25rem 0;text-align:center;color:var(--muted)}
+
+/* Small utilities */
+.muted{color:var(--muted)}
+.small{font-size:0.85rem}
+.hidden{display:none}
+.stats{display:flex;gap:1.25rem;margin-top:1rem;padding:0;list-style:none}
+.stats li{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.lead{max-width:48ch}
+
+/* Responsive */
+@media (max-width:1000px){
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr;gap:1.25rem}
+}
+@media (max-width:700px){
+  .nav-toggle{display:inline-block}
+  .nav-menu{position:absolute;top:64px;right:1rem;background:var(--card);padding:0.75rem;border-radius:10px;flex-direction:column;display:none}
+  .nav-menu.show{display:flex}
+  .grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+}
+
+/* Sandbox Score */
+#sandbox-score{padding:0.75rem}
+.progress{height:12px;background:rgba(255,255,255,0.06);border-radius:999px;overflow:hidden}
+.progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--primary), var(--accent));width:0%}
+
+/* Admin styles (simple) */
+#admin-area pre{white-space:pre-wrap}
